@@ -18,12 +18,26 @@ def main():
 	'''Read the file and get a List for a Line '''
 	fo = File_handler.FileHandler()
 	fd_read = fo.file_open("test.txt","test2.txt","test3.txt")
+	'''This file will return file handler for the Read out file '''
+	
+	
 	for line in fd_read:
-		'''print line'''
+		'''Line will give the 1st line ended buy \n, add all the lines in a string array'''
 		List_of_lines.append(line)
 		Lineparser = Parser.parser.Parser()
 		Lineparser.Check_Vowels(line)
 		
+		'''Write on the vowel file'''
+		for vow in Lineparser.elements_Vowels:
+			vow = vow + '\n'
+			fo.file_name_1.write(vow)
+		
+		'''Write on the Inverted  file'''
+		for vow in Lineparser.elements_Inverted:
+			vow = vow + '\n'
+			fo.file_name_2.write(vow)
+			
+			
 		
 	fo.close_all_files()
 		
