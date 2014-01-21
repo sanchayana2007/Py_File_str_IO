@@ -9,10 +9,15 @@ import fileinput
 
 def main():
 	''' Usage , pattern and version are predefined atributes for OPtionParser'''
-	opparser = OptionParser(usage="%prog -e PATTREN",version="%prog 1.0")
+	opparser = OptionParser(usage="%prog -i file1 -f file2 -d file3  B1060550",version="%prog 1.0")
 	''' Store is REGEXPR and -e , will store the value in regexpr If not given then default is false and help '''
-	opparser.add_option("-e","--regexpr",dest="regexpr",action="store", default=False ,help="pattern expresion for match ")
+	opparser.add_option('-i', action="store" ,help="Input file to read from ")
+	opparser.add_option('-f', action="store",help="Input file to Write vowels ")
+	opparser.add_option('-d', action="store" ,help="Input file to Write Non vowels  ")
+	
 	opt,args = opparser.parse_args()
+	print opt.i , opt.f,opt.d
+	
 	
 	List_of_lines = []
 	'''Read the file and get a List for a Line '''
