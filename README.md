@@ -17,3 +17,11 @@ Use chain of resposibility
 6. Use lamda functions 
 7. Check all the special charatcters if it is : then take the word before that as name .
 
+
+
+Code Repetation:
+
+1. File Operrations 
+2. Modules and classes 
+3. Reg expression 
+4. Optparser
