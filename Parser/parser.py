@@ -12,6 +12,7 @@ class Parser(object):
 		self.vowel_flag = 0
 		
 	def Check_Vowels(self,line):
+		
 		'''pattern_space = re.split("(?:(?:[^a-zA-Z]+')|(?:'[^a-zA-Z]+))|(?:[^a-zA-Z']+)", line)'''
 		pattern_space = re.compile("([\w][\w]*'?\w?)").findall(line)
 		if pattern_space:
